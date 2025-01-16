@@ -48,7 +48,7 @@ class ProductResource extends Resource
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('price')
-                    ->money('idr')
+                    ->money('idr', locale: 'id')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
