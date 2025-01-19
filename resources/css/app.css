@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@theme {
+    --color-primary: var(--color-indigo-600);
+    --color-secondary: var(--color-orange-600);
+    --color-info: var(--color-blue-600);
+}
