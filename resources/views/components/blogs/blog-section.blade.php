@@ -11,8 +11,8 @@
             </p>
         </div>
 
-        @forelse($articles as $article)
-            <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            @forelse($articles as $article)
                 <div
                     class="group p-6 sm:p-8 rounded-3xl bg-white border border-gray-100 dark:shadow-none dark:border-gray-700 dark:bg-gray-800 bg-opacity-50 shadow-2xl shadow-gray-600/10">
                     <div class="relative overflow-hidden rounded-xl">
@@ -38,21 +38,22 @@
                     </div>
 
                 </div>
-            </div>
-        @empty
-            <div class="text-center py-12 ">
-                <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
-                    Tidak ada Artikel yang tersedia saat ini
-                </h2>
-                <p class="text-gray-600 dark:text-gray-300 mb-6">
-                    Kami sedang memperbarui katalog Artikel kami. Silakan cek kembali nanti!
-                </p>
-                <a href="/"
-                   class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
-                    Kembali ke Beranda
-                </a>
-            </div>
-        @endforelse
+
+            @empty
+                <div class="flex flex-col items-center justify-center w-full  col-span-12 text-center py-12">
+                    <h2 class="text-2xl font-semibold text-gray-800 dark:text-white mb-4">
+                        Tidak ada Artikel yang tersedia saat ini
+                    </h2>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">
+                        Kami sedang memperbarui katalog Artikel kami. Silakan cek kembali nanti!
+                    </p>
+                    <a href="/"
+                       class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
+                        Kembali ke Beranda
+                    </a>
+                </div>
+            @endforelse
+        </div>
 
     </x-container>
 </div>

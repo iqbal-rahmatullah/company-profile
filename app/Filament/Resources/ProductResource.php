@@ -33,7 +33,8 @@ class ProductResource extends Resource
                 Forms\Components\TextInput::make('price')
                     ->required()
                     ->numeric()
-                    ->prefix('Rp.'),
+                    ->prefix('Rp.')
+                    ->maxValue(99999999),
                 Forms\Components\FileUpload::make('image')
                     ->image()
                     ->required(),
