@@ -24,12 +24,9 @@
         <x-container>
             <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4">
                 <div class="relative z-20 flex w-full justify-between md:px-0 lg:w-fit">
-                    <a href="/#home" aria-label="logo" class="flex items-center space-x-2">
-                        <div aria-hidden="true" class="flex space-x-1">
-                            <div class="size-4 rounded-full bg-gray-900 dark:bg-white"></div>
-                            <div class="h-6 w-2 bg-primary"></div>
-                        </div>
-                        <span class="text-2xl font-bold text-gray-900 dark:text-white">Astrolus</span>
+                    <a href="/" aria-label="logo" class="flex items-center space-x-2">
+                        <img src="{{asset('images/logo-raksacyber.png')}}" alt="logo" class="w-10"/>
+                        <span class="text-xl font-bold text-gray-800 dark:text-white">RaksaCyber</span>
                     </a>
 
                     <div class="relative flex max-h-10 items-center lg:hidden">
@@ -56,12 +53,6 @@
                                     <span>{{ $link['label'] }}</span>
                                 </a>
                             @endforeach
-                            {{--                            <a href="https://tailtips.dev" target="_blank"--}}
-                            {{--                               class="flex gap-2 font-semibold text-gray-700 transition hover:text-primary dark:text-white dark:hover:text-white md:px-4">--}}
-                            {{--                                <span>TailwindCSS Tips</span>--}}
-                            {{--                                <span--}}
-                            {{--                                    class="flex rounded-full border bg-primary/20 px-2 py-0.5 text-xs tracking-wider text-purple-700 dark:bg-white/10 dark:text-orange-300">New</span>--}}
-                            {{--                            </a>--}}
                         </div>
                     </div>
                 </div>

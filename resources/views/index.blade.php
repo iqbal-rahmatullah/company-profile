@@ -4,11 +4,9 @@
 
 @section('content')
     <main class="space-y-40 mb-40">
-        <x-hero-section></x-hero-section>
-        <x-feature-section></x-feature-section>
-        <x-stats-section></x-stats-section>
-        <x-testimonial-section></x-testimonial-section>
-        <x-call-to-action></x-call-to-action>
-        <x-blog-section></x-blog-section>
+        <x-home.hero-section></x-home.hero-section>
+        <x-home.why-me-section></x-home.why-me-section>
+        <x-home.testimonial-section></x-home.testimonial-section>
+        <x-home.call-to-action></x-home.call-to-action>
     </main>
 @endsection

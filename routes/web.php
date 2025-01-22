@@ -17,6 +17,6 @@ Route::get('/about_us', function () {
     return view('about_us');
 });
 Route::group(['prefix' => 'contact'], function () {
-    Route::get('/', [ContactController::class, 'index']);
+    Route::get('/', [ContactController::class, 'index'])->name('contact');
     Route::post('/', [ContactController::class, 'store'])->name('contact.store');
 });

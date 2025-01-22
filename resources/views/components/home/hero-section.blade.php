@@ -15,7 +15,16 @@
             'name' => 'Security Solutions',
             'description' => 'We provide a comprehensive security assessment to identify vulnerabilities and weaknesses in your system.',
         ],
-    ]
+    ];
+
+    $sponsor_image = [
+        'microsoft' => 'images/clients/microsoft.svg',
+        'airbnb' => 'images/clients/airbnb.svg',
+        'google' => 'images/clients/google.svg',
+        'ge' => 'images/clients/ge.svg',
+        'netflix' => 'images/clients/netflix.svg',
+        'google-cloud' => 'images/clients/google-cloud.svg',
+    ];
 @endphp
 
 <div class="relative" id="home">
@@ -32,14 +41,15 @@
                     Anda saat ini, tetapi juga berkomitmen untuk membangun masa depan yang lebih aman.
                 </p>
                 <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
-                    <a
-                        href="#"
+                    <a href="{{route('contact')}}">
+                    <span
                         class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:border before:border-transparent before:bg-primary/10 before:bg-gradient-to-b before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 dark:before:border-gray-700 dark:before:bg-gray-800 sm:w-max"
                     >
-                      <span
-                          class="relative text-base font-semibold text-primary dark:text-white"
-                      >Hubungi Kami</span
-                      >
+                        <span
+                            class="relative text-base font-semibold text-primary dark:text-white"
+                        >
+                            Hubungi Kami
+                        </span>
                     </a>
                 </div>
                 <div class="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between">
@@ -52,30 +62,12 @@
                 </div>
             </div>
             <div class="mt-12 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6">
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                    <img src="{{ asset('images/clients/microsoft.svg') }}" class="h-12 w-auto mx-auto" loading="lazy"
-                         alt="client logo" width="" height=""/>
-                </div>
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/airbnb.svg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo"
-                         width="" height=""/>
-                </div>
-                <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/google.svg" class="h-9 w-auto m-auto" loading="lazy" alt="client logo"
-                         width="" height=""/>
-                </div>
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/ge.svg" class="h-12 w-auto mx-auto" loading="lazy" alt="client logo"
-                         width="" height=""/>
-                </div>
-                <div class="p-4 flex grayscale transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/netflix.svg" class="h-8 w-auto m-auto" loading="lazy" alt="client logo"
-                         width="" height=""/>
-                </div>
-                <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
-                    <img src="./images/clients/google-cloud.svg" class="h-12 w-auto mx-auto" loading="lazy"
-                         alt="client logo" width="" height=""/>
-                </div>
+                @foreach($sponsor_image as $sponsor)
+                    <div class="p-4 grayscale transition duration-200 hover:grayscale-0">
+                        <img src="{{ asset($sponsor) }}" class="h-12 w-auto mx-auto" loading="lazy"
+                             alt="client logo" width="" height=""/>
+                    </div>
+                @endforeach
             </div>
         </div>
     </x-container>

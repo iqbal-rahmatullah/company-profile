@@ -16,6 +16,6 @@ class BlogController extends Controller
 
     public function show(Article $article)
     {
-        //
+        return view('detail-blog', compact('article'));
     }
 }
