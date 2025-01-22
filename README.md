@@ -3,7 +3,7 @@
 ## Deskripsi Proyek
 
 Proyek ini adalah sebuah website perusahaan yang mencakup beberapa halaman utama seperti Beranda, Produk, Artikel/Blog,
-Tentang Kami, dan Kontak. Proyek ini menggunakan Laravel untuk pengembangan backend dan Laravel Filament untuk panel
+Tentang Kami, dan Kontak. Proyek ini menggunakan Laravel dan Laravel Filament untuk panel
 admin.
 
 ### Fitur Utama
@@ -66,15 +66,13 @@ admin.
 
 ### Teknologi yang Digunakan
 
-- Laravel 10
+- Laravel 11
 
 - Laravel Filament
 
 - MySQL
 
 - TailwindCSS
-
-- Livewire
 
 ## Instalasi Proyek
 
@@ -90,14 +88,7 @@ admin.
 
 ### Langkah Instalasi
 
-1. **Clone Repository**
-
-   ```
-   git clone https://github.com/username/project-name.git
-   cd project-name
-   ```
-
-2. **Install Dependencies**
+1. **Install Dependencies**
 
    ```
    composer install
@@ -105,7 +96,7 @@ admin.
    npm run dev
    ```
 
-3. **Konfigurasi Environment**
+2. **Konfigurasi Environment**
 
     - Salin file `.env.example` menjadi `.env`:
 
@@ -124,19 +115,19 @@ admin.
       DB_PASSWORD=password
       ```
 
-4. **Generate Application Key**
+3. **Generate Application Key**
 
    ```
    php artisan key:generate
    ```
 
-5. **Migrasi dan Seed Database**
+4. **Migrasi dan Seed Database**
 
    ```
    php artisan migrate --seed
    ```
 
-6. **Menjalankan Server**
+5. **Menjalankan Server**
 
    ```
    php artisan serve
