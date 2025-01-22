@@ -1,20 +1,20 @@
 @php
     $links = [
         [
-            "to" => "/#features",
-            "label" => "Features",
+            "to" => "/product",
+            "label" => "Products",
         ],
         [
-            "to" => "/#solution",
-            "label" => "Solution",
+            "to" => "/blog",
+            "label" => "Blog",
         ],
         [
-            "to" => "/#reviews",
-            "label" => "Reviews",
+            "to" => "/about_us",
+            "label" => "About Us",
         ],
         [
-            "to" => "https://github.com/luasenvy/nextjs-astro-theme",
-            "label" => "NextJS Version",
+            "to" => "/contact",
+            "label" => "Contact",
         ],
     ];
 @endphp
